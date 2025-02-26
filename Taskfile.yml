@@ -2,17 +2,17 @@ version: "3"
     
 tasks:
     build:
-        desc: Build the app
+        desc: Build the application (Linux x64)
         cmds:
         - GOOS=linux GOARCH=amd64 go build -o bin/hashit main.go 
 
     run: 
-        desc: Run the app
+        desc: Run the application
         cmds:
         - go run main.go
 
     hash:
-        desc: Execute the applictaion
+        desc: Build and execute the applictaion (Linux x64)
         deps: 
         - build 
 
@@ -21,14 +21,19 @@ tasks:
         - ./bin/hashit
 
     win:
-        desc: Build the app
+        desc: Build the application (Windows x64)
         cmds:
         - GOOS=windows GOARCH=amd64 go build -o win/hashit.exe main.go 
 
     mac:
-        desc: Build the app
+        desc: Build the application (Mac x64)
         cmds:
         - GOOS=darwin GOARCH=amd64 go build -o mac/hashit main.go 
+    
+    mac-arm:
+        desc: Build the application (Mac arm64)
+        cmds:
+        - GOOS=darwin GOARCH=arm64 go build -o mac/hashit-arm64 main.go 
 
     clean:
         desc: Cleanup build files

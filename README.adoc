@@ -21,3 +21,20 @@ Arguments:
   -d  --directory  Name of directory containing files to be hashed.
 ----
 
+== Build
+This application utilises the [Task|https://taskfile.dev/installation/] application to
+run the build tasks. The following operations are currently defined
+
+[source,text]
+----  
+* run:           Run the app
+* clean:         Cleanup build files
+* hash:          Build and execute the applictaion (Linux x64)
+* build:         Build the application (Linux x64)
+* mac:           Build the application (Mac x64)
+* mac-arm:       Build the application (Mac arm64)
+* win:           Build the application (Windows x64)
+----
+
+By default (if you run the task runner with no options) the build,mac and win tasks are run in parrallel.
+
