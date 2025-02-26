@@ -21,9 +21,9 @@ func main() {
   parser := argparse.NewParser("hashit", "Create hash of a file / all files within a specified directory")
 
   verb := parser.Flag("v", "verbose", &argparse.Options{Help: "Enable verbose mode"})
-  inFileOption := parser.String("i","input", &argparse.Options{Required: false, Help: "Name of file to hash"})
-  outFileOption := parser.String("o","output", &argparse.Options{Required: false, Help: "Name of file to hash results to"})
-  inDirOption := parser.String("d","directory", &argparse.Options{Required: false, Help: "Name of directory containing files to be hashed"})
+  inFileOption := parser.String("i","input", &argparse.Options{Required: false, Help: "Name of file to hash."})
+  outFileOption := parser.String("o","output", &argparse.Options{Required: false, Help: "Name of file to write hash results to."})
+  inDirOption := parser.String("d","directory", &argparse.Options{Required: false, Help: "Name of directory containing files to be hashed."})
 
   // Parse input
   err := parser.Parse(os.Args)

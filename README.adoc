@@ -1,0 +1,24 @@
+= HASHIT
+== Description
+
+hashit is a simple file utility to calculate hash values
+for a single file / for a list of files contained within a directory. 
+
+.command
+[source,shell]
+----
+usage: hashit [-h|--help] [-v|--verbose] [-i|--input "<value>"] [-o|--output
+              "<value>"] [-d|--directory "<value>"]
+
+              Create hash of a file / all files within a specified directory
+
+Arguments:
+
+  -h  --help       Print help information
+  -v  --verbose    Enable verbose mode
+  -i  --input      Name of file to hash.
+  -o  --output     Name of file to write hash results to.
+  -d  --directory  Name of directory containing files to be hashed.
+----
+
+
