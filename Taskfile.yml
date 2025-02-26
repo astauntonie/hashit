@@ -5,30 +5,38 @@ tasks:
         desc: Build the app
         cmds:
         - GOOS=linux GOARCH=amd64 go build -o bin/hashit main.go 
+
     run: 
         desc: Run the app
         cmds:
         - go run main.go
+
     hash:
         desc: Execute the applictaion
         deps: 
         - build 
+
         cmds:
+        - task: build
         - ./bin/hashit
+
     win:
         desc: Build the app
         cmds:
         - GOOS=windows GOARCH=amd64 go build -o win/hashit.exe main.go 
+
     mac:
         desc: Build the app
         cmds:
         - GOOS=darwin GOARCH=amd64 go build -o mac/hashit main.go 
+
     clean:
         desc: Cleanup build files
         cmds:
         - rm -rf ./bin
         - rm -rf ./win
         - rm -rf ./mac
+
     default:
         deps:
         - build
