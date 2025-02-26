@@ -22,7 +22,7 @@ Arguments:
 ----
 
 == Build
-This application utilises the [Task|https://taskfile.dev/installation/] application to
+This application utilises the https://taskfile.dev/installation/[Task] application to
 run the build tasks. The following operations are currently defined
 
 [source,text]
